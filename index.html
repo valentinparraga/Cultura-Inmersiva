@@ -12,57 +12,253 @@
     <!-- Navbar menú -->
     <nav class="navbar">
         <div class="navbar__logos-container">
-            <img src="/assets/CULTURA INMERSIVA.png" alt ="Cultura Inmersiva" class = "navbar__logo-cultura">
+            <img src="/assets/icons-footers/CET-logonegro.png" alt ="Cultura Inmersiva" class = "navbar__logo-cultura">
             <img src="/assets/Logo ICPBA.png" alt = "Instituto Cultural" class = "navbar__logo-instituto">
         </div>
         <div class="navbar__links-container">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Personajes</a></li>
-                <li><a href="#">¿Qué es la RA?</a></li>
+                <li><a href="#cards">Personajes</a></li>
+                <li><a href="#articulo">¿Qué es la RA?</a></li>
                 <li><a href="#">Artistas</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Main interactivo -->
-    <main class="slider">
-        <img src="/assets/imagen.png" alt="Menú Slider">
+    <main>
+
+        <div class="slider">
+            <div class="slider__container">
+                <input type="radio" name="slider__btn" id="slideOne" checked>
+                <input type="radio" name="slider__btn" id="slideTwo">
+                <input type="radio" name="slider__btn" id="slideThree">
+
+                <div class="slider-btns">
+                    <label for="slideOne"></label>
+                    <label for="slideTwo"></label>
+                    <label for="slideThree"></label>
+                </div>
+
+                <div class="slider__images">
+                    <div class="firstslide">
+                        <img id="img1" src="assets/menu-slider/img1.png"/>
+                    </div>
+                    <div class="secondslide">
+                        <img id="img2" src="assets/menu-slider/img2.jpg"/>
+                    </div>
+                    <div class="thirdslide">
+                        <img id="img3" src="assets/menu-slider/img3.jpeg"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </main>
 
     <!-- Artículo informativo sobre el proyecto -->
      <article>
-        <div class="article__container">
+        <div class="article__container" id="articulo">
            <h2 class="article__title">Una obra magnífica</h2>
-           <p class="article__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia aspernatur doloribus quo quam iusto earum laudantium nisi beatae! Nemo reiciendis nisi culpa nostrum perferendis, repellat illum quod porro facilis provident unde ipsam, laborum consequatur. Quam at ratione facilis atque quibusdam mollitia quo consequuntur cupiditate tenetur fugit aliquid sunt voluptate eveniet in architecto nesciunt repellat aut eaque, quidem omnis deserunt! Eligendi mollitia voluptate fuga minima error delectus molestias asperiores officia eos.</p>     
+           <p class="article__text">Las obras presentadas exploran las complejidades de la identidad bonaerense, indagando en cómo la tecnología y la realidad aumentada redefinen nuestra percepción de lo que significa ser de la provincia de Buenos Aires.
+            En un contexto donde el arte y la tecnología convergen, esta muestra posibilita crear experiencias inmersivas que mezclan el entorno físico con capas digitales, revelando nuevas dimensiones de la identidad y la historia de nuestro territorio.
+            Esta exposición nos permite identificar cómo la tecnología no solo cambia la forma en que interactuamos con nuestro entorno, sino también cómo nos vemos a nosotros mismos y a nuestra cultura.
+            Dicha muestra reflexiona sobre la configuración y transformación del ser bonaerense en la era de la inteligencia artificial y la realidad aumentada.</p>     
         </div>
         <hr>
         <div class="article__container">
             <h2 class="article__title">¿Qué es la realidad aumentada?</h2>
-            <p class="article__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci at culpa deleniti, aut vitae ipsum quae sint. Eius, tempore? Nostrum ipsa laboriosam cupiditate aut facilis voluptatibus fugit ratione ipsum, illum nihil at repellat obcaecati, minima, necessitatibus dicta quisquam. Aliquid cum ut inventore sint sit laboriosam nemo est, quidem necessitatibus quae, illo, molestiae maiores temporibus enim quis veniam rem repellat eaque accusamus labore suscipit dolor vel. Ducimus repellendus doloribus provident suscipit tempore quidem porro amet? Saepe dolorum, ea possimus iusto dolore cumque eos culpa eius commodi pariatur magni nobis libero optio asperiores vitae alias mollitia? Accusantium.</p>
+            <p class="article__text">La realidad aumentada (RA) es un tipo de tecnología que combina elementos virtuales con elementos físicos. Tiene algunos aspectos en común con la Realidad Virtual (VR), ya que ambas nos permiten ver e interactuar con imágenes, objetos y otros elementos construidos digitalmente. <br>
+                 Sin embargo, también existen diferencias importantes: la VR requiere de dispositivos especiales, como cascos, y al utilizarlos dejamos de ver el mundo físico, viendo únicamente el entorno digital. En cambio, la RA permite combinar elementos virtuales con el entorno físico que nos rodea, creando una experiencia mixta. Además, estas experiencias suelen ser accesibles desde dispositivos comunes como teléfonos móviles o tablets. <br>
+                 Para superponer imágenes digitales con el mundo real, la RA utiliza tecnologías como la cámara, GPS, sensores de movimiento, entre otros, para reconocer y hacer seguimiento de objetos o lugares físicos.</p>
         </div>
      </article>
 
      <!-- Sección de tarjetas interactivas -->
-     <section class="cards__container">
-        
+     <section class="cards__container" id="cards">
+
+        <h2> Personajes </h2>
+        <!-- Navbar de personajes -->
+        <nav class="character-list">
+            <ul>
+                <li><a href="#pizarnik"> Alejandra Pizarnik</a></li>
+                <li><a href="#piazzolla"> Astor Piazzolla </a></li>
+                <li><a href="#yupanqui"> Atahualpa Yupanqui </a></li>
+                <li><a href="#maradona"> Diego Armando Maradona</a></li>
+                <li><a href="#petorutti"> Emilio Petorutti </a></li>
+                <li><a href="#hudson"> Enrique Hudson </a></li>
+                <li><a href="#eva"> Eva Perón </a></li>
+                <li><a href="#bonafini"> Hebe de Bonafini </a></li>
+                <li><a href="#pallamay"> Isabel Pallamay </a></li>
+                <li><a href="#peron"> Juan Domingo Perón </a></li>
+                <li><a href="#walsh"> María Elena Walsh </a></li>
+                <li><a href="#muñoz"> Mariela Muñoz </a></li>
+            </ul>
+        </nav>
+
+        <div class="card-container" id="pizarnik">
+            <img src="/assets/cards/alejandra_pizarnik.jpeg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Alejandra Pizarnik</h3>
+                    <p class="card-text">Hija de una familia inmigrante, Alejandra Pizarnik nació en Avellaneda en 1936. Escribió poesías, críticas literarias, novelas cortas y diarios personales. Con estilo intenso y agudo, habló de su sexualidad, su cuerpo, sus deseos y sus obsesiones y, con ello, propuso otras formas posibles de vivir la feminidad. Se convirtió en una de las voces más reconocidas de las letras argentinas. </p>    
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container reverse" id="piazzolla">
+            <img src="/assets/cards/astor_piazzolla.jpeg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Astor Piazzolla</h3>
+                    <p class="card-text">Con sus composiciones y su bandoneón, revolucionó el tango, por eso es reconocido como uno de los compositores y músicos más importantes del siglo XX. Nacido en Mar del Plata en 1921 y con una amplia trayectoria en Estados Unidos y Europa, su legado sigue vivo en todo el mundo. Es considerado un referente indiscutido no sólo en el tango, sino también en todo el arco musical.</p>
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container" id="yupanqui">
+            <img src="/assets/cards/atahualpa_yupanqui.jpg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Atahualpa Yupanqui</h3>
+                    <p class="card-text">Nació como Héctor Roberto Chavero Aramburu en Pergamino en 1908 y eligió como seudónimo Atahualpa Yupanqui, que en quechua significa “persona que viene de tierras lejanas a contar algo”. Este nombre se hizo carne y contó/cantó los caminos y los campos, las penas y la vida cotidiana de la provincia de Buenos Aires. Renovó la música argentina y es reconocido como uno de los artistas populares más célebres de nuestro país.</p>    
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container reverse" id="maradona">
+            <img src="/assets/cards/diego_armando_maradona.jpg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Diego Armando Maradona</h3>
+                    <p class="card-text">Nació en Villa Fiorito, Lomas de Zamora, en 1960. Se convirtió en un legendario jugador de fútbol y en un ícono popular a nivel mundial. Su legado trascendió las canchas de fútbol y se instaló en el corazón del imaginario social argentino. Promovió mística, pasión y una profunda identificación colectiva.</p>    
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container" id="petorutti">
+            <img src="/assets/cards/emilio_pettoruti_pulindra.jpg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Emilio Petorutti</h3>
+                    <p class="card-text">Nació en La Plata en 1892. Se convirtió en uno de los pintores argentinos más destacados del siglo XX. Es reconocido por ser uno de los principales exponentes de la vanguardia artística en Argentina y por sus aportes a la renovación del arte local a través de su rol como artista, crítico de arte y director del Museo Provincial de Bellas Artes. También, fue un influyente maestro que dejó un legado duradero en las generaciones futuras de artistas.</p>
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container reverse" id="hudson">
+            <img src="/assets/cards/enrique_hudson.jpg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Enrique Hudson</h3>
+                    <p class="card-text">Nació en 1841 en La Plata. Como naturalista y escritor, Hudson dedicó gran parte de su vida a estudiar y preservar la flora y fauna de la región. Su obra literaria capturó la belleza y la diversidad de la Provincia, contribuyendo a su reconocimiento y valoración. Además, Hudson fue un defensor temprano de la conservación ambiental, abogando por la protección de los ecosistemas únicos de la provincia de Buenos Aires.</p>   
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container" id="eva">
+            <img src="/assets/cards/eva_peron.jpeg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Eva Perón</h3>
+                    <p class="card-text">Nació en 1919 en Los Toldos. De infancia plebeya y juventud artística de radioteatro, encontró su destino en la política. Luchó hasta su muerte, dejando jirones de su vida, en la pelea por el reconocimiento de los derechos de las mujeres, los niños y los trabajadores. Se convirtió en una de las figuras más gravitantes del siglo XX argentino.</p>                       
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container reverse" id="bonafini">
+            <img src="/assets/cards/hebe_de_bonafini.jpg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Hebe de Bonafini</h3>
+                    <p class="card-text">Desde La Plata, forjó una vida de lucha en contra del terrorismo de Estado y en defensa de los derechos humanos. Buscando a sus hijos y su nuera desaparecidxs durante la dictadura cívico-militar de 1976-1983, fundó junto a otras mujeres la Asociación Madres de Plaza de Mayo. Es un símbolo de resistencia, coraje y rebeldía.</p>    
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container" id="pallamay">
+            <img src="/assets/cards/isabel_pallamay.jpg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Isabel Pallamay</h3>
+                    <p class="card-text">Nació entre 1678 y 1684. Fue la primera mujer en acceder a un cacicazgo en los pueblos indígenas de Argentina, un rol reservado para los varones. Defendió a su pueblo quilme de la invasión española y gobernó durante diez años. Desafió las convenciones de su época, luchó por su patria y se convirtió en una figura trascendental de la historia y la identidad de nuestra provincia.</p>    
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container reverse" id="peron">
+            <img src="/assets/cards/juan_domingo_peron.jpeg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Juan Domingo Perón</h3>
+                    <p class="card-text">El peronismo transformó la política argentina y dejó una marca indeleble en la cultura y la identidad de la Provincia y el país. Perón, nacido en Lobos en 1945, introdujo nuevas ideas y símbolos que resonaron profundamente en la sociedad argentina, que siguen vigentes hasta el día de hoy.</p>
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container" id="walsh">
+            <img src="/assets/cards/maria_elena_walsh.jpeg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Maria Elena Walsh</h3>
+                    <p class="card-text">Nació en Villa Sarmiento, Morón, en 1930. Su contribución a la literatura y la música ha acompañado a generaciones de niñas y niños argentinos. Además, fue una defensora de los derechos humanos, de los derechos de las mujeres y se alzó como una voz crítica de nuestra sociedad. Su legado la convierte en una figura destacada de la cultura argentina.</p>
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
+
+        <div class="card-container reverse" id="muñoz">
+            <img src="/assets/cards/mariela_muñoz.jpg" alt="">
+            <div class="card-container-info">
+                <span class="info-text">
+                    <h3 class="card-title">Mariela Muñoz</h3>
+                    <p class="card-text">Nació en 1943 en Tucumán y vivió desde su infancia en Quilmes. Fue la primera persona trans en obtener el cambio de nombre y de género en su DNI. Su precedente y su lucha fueron claves para la promulgación de la Ley de Identidad de Género y también para los derechos de las personas trans a adoptar. Su legado sigue siendo una inspiración para la comunidad LGBTIQ+ y para todas las personas que luchan por un mundo más igualitario.</p>    
+                </span>
+                <button>Escaneá y descubrí</button>
+            </div>
+        </div>
      </section>
 
      <!-- Footer -->
      <footer>
-        <h2>FOOTER</h2>
-        <img src="/assets/Logo ICPBA.png" alt = "Instituto Cultural" class = "navbar__logo-instituto">
-        <div class="socials__container">
-            <h5>Para más información</h5>
-            <h3>Redes sociales oficiales</h3>
-            <div class="socials__logo-container">
-                <a href="x.com" target="_blank"><img src="" alt="Twitter / X"></a>
-                <a href="instagram.com" target="_blank"><img src="" alt="Instagram"></a>
-                <a href="youtube.com" target="_blank"><img src="" alt="YouTube"></a>
-                <a href="facebook.com" target="_blank"><img src="" alt="Facebook"></a>
+        <img src="/assets/icons-footers/ICBA-vertical.png" alt="">
+
+        <div class="footer__socials">
+            <h4 style="color: white;">Para más información</h4>
+            <h3 style="color: white;">Redes sociales oficiales</h3>
+            <span class="socials__btns">
+                <a href="https://www.instagram.com/buenosairescultura/"> <img src="/assets/icons-footers/ig-icon 1.png" alt=""></a>
+                <a href="https://www.youtube.com/@institutoculturaldelaprovincia"> <img src="/assets/icons-footers/yt-icon 1.png" alt=""></a>
+                <a href="#"> <img src="/assets/icons-footers/x-icon 1.png" alt=""></a>
+                <a href="#"> <img src="/assets/icons-footers/fb-icon 1.png" alt=""></a>
+            </span>
+        </div>
+
+        <div class="footer__extra">
+            <span>
+                <img src="/assets/icons-footers/fondo-footer.png" alt="">
+            </span>
+            <div class="footer__extra-logo">
+                <img src="/assets/icons-footers/finde-logo.png" alt="">
+                <img src="/assets/icons-footers/codigo-logo.png" alt="">
+                <img src="/assets/icons-footers/bafilma-logo.png" alt="">
+                <img src="/assets/icons-footers/CET.png" alt="">    
             </div>
         </div>
-        <div class="logos__container"></div>
+
      </footer>
+
+     <script src="main.js"></script>
 </body>
 </html>
