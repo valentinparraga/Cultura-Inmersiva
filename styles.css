@@ -8,6 +8,17 @@
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
+    /* outline: 1px solid red; */
+}
+
+html, body {
+    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
+    width: 100%; /* Asegurar ancho completo del viewport */
+}
+
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 .navbar{
@@ -30,6 +41,7 @@
     align-items: self-start;
     justify-content: space-evenly;
     background-color: grey;
+
 }
 
 .navbar__links-container a{
@@ -45,97 +57,15 @@
 }
 
 /* MENÚ SLIDER */
-.slider{
-    overflow-x: hidden;
-}
-
-.slider__container input{
-    visibility: hidden;
-    display: none;
-}
-
-.slider-btns{
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20%;
-    gap: 10px;
-}
-
-.slider-btns label{
-    width: 20px;
-    height: 20px;
-    background-color: gainsboro;
-    border-radius: 50%;
-    border: 1px solid black;
-    opacity: 0.5;
-    cursor: pointer;
-    z-index: 1;
-    transition: 300ms ease-in-out;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    -webkit-transition: 300ms ease-in-out;
-    -moz-transition: 300ms ease-in-out;
-    -ms-transition: 300ms ease-in-out;
-    -o-transition: 300ms ease-in-out;
-}
-
-.slider-btns label:hover{
-    scale: 1.2;
-    opacity: 1;
-}
-
-/* Enlazar input con labels */
-.slider__container input:nth-child(1):checked ~ .slider-btns label:nth-child(1),
-.slider__container input:nth-child(2):checked ~ .slider-btns label:nth-child(2),
-.slider__container input:nth-child(3):checked ~ .slider-btns label:nth-child(3){
-    opacity: 1;
-    scroll-margin: 1.2;
-    background-color: white;
-}
-
-.slider__images{
-    width: 300vw;
-    position: relative;
-    display: flex;
-    transition: 400ms ease-in-out;
-    -webkit-transition: 400ms ease-in-out;
-    -moz-transition: 400ms ease-in-out;
-    -ms-transition: 400ms ease-in-out;
-    -o-transition: 400ms ease-in-out;
-}
-
-.firstslide, .secondslide, .thirdslide{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#img1, #img2, #img3{
+.slider__container img{
     height: 400px;
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
 }
 
-.slider__container input:nth-child(1):checked ~ .slider__images{
-    left: 0;
-}
 
-.slider__container input:nth-child(2):checked ~ .slider__images{
-    left: -100vw;
-}
-
-.slider__container input:nth-child(3):checked ~ .slider__images{
-    left: -200vw;
-}
-
+/* ARTICULOS */
 article{
     display: flex;
     flex-direction: row;
@@ -149,33 +79,38 @@ article hr{
 }
 
 .article__container{
-    margin: 3em;
+    margin: 40px;
     padding: 5px 50px;
     height: auto;
-    width: 50%;
-    text-align: left;
-    line-height: 2;
-    color: gray;
+    width: 1000px;
+    text-align: justify;
+    color: rgb(76, 76, 76);
 }
 
 .article__title{
     font-size: 40px;
+    margin-bottom: 1em;
 }
 
 .article__text{
     font-size: 20px;
+    line-height: 1.4em;
 }
 
 /* Estilos cards */
 .cards__container{
     background: rgb(239,0,255);
-background: linear-gradient(0deg, rgba(239,0,255,1) 0%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(0deg, rgba(239,0,255,1) 0%, rgba(0,212,255,1) 100%);
+    
     display: flex;
     flex-direction: column;
+   
     gap: 20px;
-    height: auto;
-    width: 100%;
     padding: 50px;
+   
+    height: auto;
+    
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
@@ -196,32 +131,63 @@ background: linear-gradient(0deg, rgba(239,0,255,1) 0%, rgba(0,212,255,1) 100%);
     font-weight: 700;
 }
 
-.card-container{
-    width: 50%;
-    height: auto;
-    background-color:rgba(255, 255, 255, 1);
-    padding: 10px;
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 900px;
+    height: 500px;
+    
+    background-color:rgb(230, 230, 230);
     border-radius: 5px;
+
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+    -webkit-transition: transform 0.4s ease;
+    -moz-transition: transform 0.4s ease;
+    -ms-transition: transform 0.4s ease;
+    -o-transition: transform 0.4s ease;
+}
+
+.card-front,
+.card-back{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+
+    gap: 15px;
+    padding: 5px 10px;
+
+    backface-visibility: hidden; /* Oculta el reverso cuando no se ve */
+}
+
+.card-back{
+    cursor: pointer;
+    transform: rotateY(180deg); /* La cara posterior se rota inicialmente */
+}
+
+.card-front__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card-back__info{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+
+    gap: 10px;
 }
 
-.card-container-info{
+.card-front-info__text{
     display: flex;
     flex-direction: column;
-    margin: 1em;
-    justify-content: space-between;
-}
 
-.info-text{
-    display: flex;
-    flex-direction: column;
     gap: 20px;
+
     text-align: left;
 }
 
@@ -235,12 +201,21 @@ background: linear-gradient(0deg, rgba(239,0,255,1) 0%, rgba(0,212,255,1) 100%);
     font-weight: 500;
 }
 
-.card-container img{
-    height: 600px;
+.card img{
+    height: 480px;
     width: auto;
 }
 
-.card-container button{
+#card-qr{
+    height: 480px;
+    width: auto;
+}
+
+.flipped{
+    transform: rotateY(180deg); /* Gira la tarjeta para mostrar el reverso */
+}
+
+.flip-button{
     background-color:cornflowerblue;
     font-weight: 600;
     color: white;
@@ -251,6 +226,7 @@ background: linear-gradient(0deg, rgba(239,0,255,1) 0%, rgba(0,212,255,1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -267,13 +243,31 @@ footer{
     flex-direction: row;
     justify-content: space-evenly;
     gap: 20px;
-    padding: 40px 0;
+    padding: 20px 0;
+}
+
+#icba-logo-vertical{
+    height: auto;
+    width: 100px;
+}
+
+.footer__main-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-evenly;
+}
+
+.footer__socials-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .footer__socials{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .socials__btns{
@@ -298,6 +292,7 @@ footer{
 }
 
 .footer__extra-logo img{
-    width: auto;
     height: 35px;
+    width: auto;
+
 }

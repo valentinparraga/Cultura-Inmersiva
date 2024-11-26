@@ -1,0 +1,150 @@
+/* menos ancho que 600
+por ende, usas maxwidth para achicar las cosas en celu  */
+@media only screen and (max-width: 600px){
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevenir desbordamiento horizontal */
+        width: 100%; /* Asegurar ancho completo del viewport */
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* NAVBAR */
+    .navbar{
+        width: 100%;
+        height: auto;
+    }
+    .navbar img{
+        height: 60px;
+        width: auto;
+    }
+
+    /* SLIDER */
+    .slider__container img{
+        object-fit: cover;
+    }
+
+    /* ARTICULOS */
+    article{
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+    article hr{
+        display: none;
+    }
+    .article__container{
+        width: 100vw;
+        margin: 0 0; /* Centrar */
+        padding: 15px 35px;
+    }
+    .article__title{
+        text-align: center;
+        font-size: 150%;
+        font-weight: 700;
+    }
+    .article__text{
+        font-size: 100%;
+        line-height: 1.6;
+        text-align: justify;
+        line-break: normal;
+        max-width:max-content;
+        white-space: pre-line;
+    }
+
+    /* CARDS */
+    .cards__container{
+        gap: 50px;
+    }
+    .character-list{
+        display: none;
+    }
+    .card{
+        height: 400px;
+        width: 250px;
+    }
+    .card-title{
+        font-size: 1em;
+        text-align: center;
+    }
+    .card-text{
+        display: none;
+    }
+    .card img{
+        height: auto;
+        width: 200px;
+    }
+    #avatar-back{
+        display: none;
+    }
+    .card-front,
+    .card-back{
+        align-items: center;
+        flex-direction: column;
+    }
+    .flip-button{
+        height: 30px;
+        width: 200px;
+    }
+
+    /* FOOTER */
+    footer{
+        gap: 15px;
+        padding: 10px;
+        flex-direction: column;
+    }
+    #icba-logo-vertical{
+        height: auto;
+        width: 80px;
+    }
+    #dibujo-fondo-footer{
+        display: none;
+    }
+    .footer__socials-container{
+        justify-content: space-between;
+    }
+    .footer__socials{
+        flex-direction: column;
+        align-items: left;
+    }
+    .footer__extra{        
+        width: 100vw;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer__extra-logo{
+        padding: 10px;
+        gap: 15px;
+    }
+    .footer__extra-logo img{
+        height: 20px;
+        width: auto;
+    }
+}
+
+
+/* DUDAS: */
+/* -Queda un gap blaco en iphone a la derecha, se corta de repente. Puede ser por liveserver? *SOLUCIONADO (propiedades aplicadas a elemento html y body en styles.css*
+
+
+
+   -Por qué se corta el texto del articulo? Y por qué queda gap en la esquina superior izq. 
+
+   -Como implementar el flip de la card en mobile? Mostrar qr en grande?
+    Generar otra card con nombre y descripción + qr en grande.  
+
+   -Probar bootstrap:
+        *agregarle clases a las cosas
+        *leer que ofrecen esas clases
+
+    Y si armo una API de las cards para renderizarlas con JS?
+        crearia un metodo que se encargue de leer un arreglo de las imagenes con sus datos (titulo, descripcion, qr etc).
+   */
