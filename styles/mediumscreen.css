@@ -1,0 +1,5 @@
+/* menos ancho que 600
+por ende, usas maxwidth para achicar las cosas en celu  */
+@media only screen and (max-width: 768px){
+    
+}

@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap');
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "Encode Sans", sans-serif;
+    font-family: "Encode Sans", serif;
+    font-optical-sizing: auto;
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
@@ -21,49 +22,11 @@ img{
     height: auto;
 }
 
-.navbar{
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
-}
-
-.navbar__logos-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 20px;
-}
-
-.navbar__links-container ul{
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    align-items: self-start;
-    justify-content: space-evenly;
-    background-color: grey;
-
-}
-
-.navbar__links-container a{
-    color: white;
-    font-size: 1em;
-    font-weight: 600;
-}
-
-.navbar__logo-cultura,
-.navbar__logo-instituto{
+/* NAVBAR */
+#navbar__logo-cultura, #navbar__logo-instituto{
     height: 100px;
     width: auto;
 }
-
-/* MENÚ SLIDER */
-.slider__container img{
-    height: 400px;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-}
-
 
 /* ARTICULOS */
 article{
@@ -75,25 +38,27 @@ article hr{
     margin-top: 15px;
     margin-bottom: 15px;
     width: 3px;
-    background-color: gray;
 }
 
-.article__container{
-    margin: 40px;
-    padding: 5px 50px;
+.article__container,
+.articulo__artistas{
+    /* margin: 40px;
+    padding: 5px 50px; */
     height: auto;
     width: 1000px;
     text-align: justify;
-    color: rgb(76, 76, 76);
 }
 
-.article__title{
+.article__title,
+.artistas__hero-title{
     font-size: 40px;
+    font-weight: 700;
     margin-bottom: 1em;
 }
 
 .article__text{
     font-size: 20px;
+    font-weight: 400;
     line-height: 1.4em;
 }
 
@@ -119,29 +84,10 @@ article hr{
     font-size: 3em;
 }
 
-.character-list ul{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.character-list a{
-    text-decoration: none;
-    color: black;
-    font-weight: 700;
-}
-
 .card{
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    width: 900px;
-    height: 500px;
-    
-    background-color:rgb(230, 230, 230);
-    border-radius: 5px;
-
+    justify-content: center;    
     transform-style: preserve-3d;
     transition: transform 0.4s ease;
     -webkit-transition: transform 0.4s ease;
@@ -163,8 +109,9 @@ article hr{
 }
 
 .card-back{
-    cursor: pointer;
     transform: rotateY(180deg); /* La cara posterior se rota inicialmente */
+    display: flex;
+    flex-direction: column;
 }
 
 .card-front__info{
@@ -215,35 +162,35 @@ article hr{
     transform: rotateY(180deg); /* Gira la tarjeta para mostrar el reverso */
 }
 
-.flip-button{
-    background-color:cornflowerblue;
-    font-weight: 600;
-    color: white;
-    height: 35px;
-    width: 160px;
-    padding: 10px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-
 .reverse{
     flex-direction: row-reverse;
 }
 
+/* ARTISTAS */
+/* #artistas{
+    outline: 1px solid red;
+} */
+#fedetorroba-avatar{
+    width: 400px;
+    height: 100%;
+}
+
+
+.artistas__hero{
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-btn{
+    height: 35px;
+    width: 160px;
+}
+
 footer{
-    background: linear-gradient(90deg, rgba(63,187,251,1) 0%, rgba(252,70,165,1) 100%);
+    background: linear-gradient(90deg, rgba(50,187,255,1) 0%, rgba(252,70,165,1) 100%);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 20px;
-    padding: 20px 0;
 }
 
 #icba-logo-vertical{
@@ -294,5 +241,4 @@ footer{
 .footer__extra-logo img{
     height: 35px;
     width: auto;
-
 }

@@ -17,13 +17,13 @@ por ende, usas maxwidth para achicar las cosas en celu  */
         height: auto;
     }
 
-    /* NAVBAR */
-    .navbar{
-        width: 100%;
-        height: auto;
+    .nav-logo-container{
+        display: flex;
+        justify-content: space-around;
     }
-    .navbar img{
-        height: 60px;
+
+    #navbar__logo-cultura, #navbar__logo-instituto{
+        height: 50px;
         width: auto;
     }
 
@@ -34,17 +34,15 @@ por ende, usas maxwidth para achicar las cosas en celu  */
 
     /* ARTICULOS */
     article{
-        margin: 0;
-        padding: 0;
         flex-direction: column;
+        align-items: center;
     }
     article hr{
         display: none;
     }
     .article__container{
-        width: 100vw;
+        width: 80vw;
         margin: 0 0; /* Centrar */
-        padding: 15px 35px;
     }
     .article__title{
         text-align: center;
@@ -64,9 +62,6 @@ por ende, usas maxwidth para achicar las cosas en celu  */
     .cards__container{
         gap: 50px;
     }
-    .character-list{
-        display: none;
-    }
     .card{
         height: 400px;
         width: 250px;
@@ -74,9 +69,6 @@ por ende, usas maxwidth para achicar las cosas en celu  */
     .card-title{
         font-size: 1em;
         text-align: center;
-    }
-    .card-text{
-        display: none;
     }
     .card img{
         height: auto;
@@ -95,6 +87,19 @@ por ende, usas maxwidth para achicar las cosas en celu  */
         width: 200px;
     }
 
+    /* ARTISTAS */
+    .artistas__hero{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .articulo__artistas{
+        width: 70vw;
+    }
+    #portfolio_btn{
+        align-self: center;
+    }
+    
     /* FOOTER */
     footer{
         gap: 15px;
@@ -132,9 +137,8 @@ por ende, usas maxwidth para achicar las cosas en celu  */
 
 
 /* DUDAS: */
-/* -Queda un gap blaco en iphone a la derecha, se corta de repente. Puede ser por liveserver? *SOLUCIONADO (propiedades aplicadas a elemento html y body en styles.css*
-
-
+/* -Queda un gap blaco en iphone a la derecha, se corta de repente. 
+    Puede ser por liveserver? *SOLUCIONADO (propiedades aplicadas a elemento html y body en styles.css)*
 
    -Por qué se corta el texto del articulo? Y por qué queda gap en la esquina superior izq. 
 
