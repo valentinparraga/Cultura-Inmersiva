@@ -66,28 +66,25 @@ article hr{
 .cards__container{
     background: rgb(239,0,255);
     background: linear-gradient(0deg, rgba(239,0,255,1) 0%, rgba(0,212,255,1) 100%);
-    
-    display: flex;
-    flex-direction: column;
-   
     gap: 20px;
-    padding: 50px;
-   
-    height: auto;
-    
-    width: 100%;
-    align-items: center;
-    justify-content: center;
 }
 
 .cards__container h2{
     font-size: 3em;
 }
 
-.card{
+.tarjeta{
     display: flex;
-    align-items: center;
-    justify-content: center;    
+    flex-direction: row;
+}
+
+.tarjeta-cuerpo{
+    display:flex;
+    flex-direction:column;
+    justify-content:between;
+}
+
+.tarjetaPersonaje{
     transform-style: preserve-3d;
     transition: transform 0.4s ease;
     -webkit-transition: transform 0.4s ease;
@@ -95,6 +92,7 @@ article hr{
     -ms-transition: transform 0.4s ease;
     -o-transition: transform 0.4s ease;
 }
+
 
 .card-front,
 .card-back{
@@ -105,8 +103,8 @@ article hr{
     gap: 15px;
     padding: 5px 10px;
 
-    backface-visibility: hidden; /* Oculta el reverso cuando no se ve */
-}
+    backface-visibility: hidden; /* Oculta el reverso cuando no se ve*/
+} 
 
 .card-back{
     transform: rotateY(180deg); /* La cara posterior se rota inicialmente */
@@ -156,7 +154,7 @@ article hr{
 #card-qr{
     height: 480px;
     width: auto;
-}
+} */
 
 .flipped{
     transform: rotateY(180deg); /* Gira la tarjeta para mostrar el reverso */

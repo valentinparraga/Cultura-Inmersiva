@@ -120,7 +120,7 @@ const createCardTemplate = (personaje) => {
     const {id, nombre, descripcion, shortcut, ilustracion, qr} = personaje
     if (esImpar(id)){
         return `
-    <div class="card bg-light border-secondary w-75 mb-3" style="height: 32em" id="${personaje.shortcut}">
+    <div class="card bg-light border-secondary w-50 mb-3" style="height: 32em" id="${personaje.shortcut}">
 
         <div class="card-front reverse">
 
@@ -134,7 +134,6 @@ const createCardTemplate = (personaje) => {
                         <div id="descripcion" class="collapse">
                             <p class="card-text text-start">${personaje.descripcion}</p>
                         </div>
-
                     </div>   
                  </span>
                 <button type="button" class="btn btn-primary btn-sm">Escaneá y descubrí</button>
@@ -152,7 +151,7 @@ const createCardTemplate = (personaje) => {
 `   
     }else {
     return `
-    <div class="card bg-light border-secondary w-75 mb-3" style="height: 32em" id="${personaje.shortcut}">
+    <div class="card bg-light border-secondary w-50 mb-3" style="height: 500px" id="${personaje.shortcut}">
 
         <div class="card-front">
 
@@ -166,7 +165,6 @@ const createCardTemplate = (personaje) => {
                         <div id="descripcion" class="collapse">
                             <p class="card-text text-start">${personaje.descripcion}</p>
                         </div>
-
                     </div>   
                  </span>
                 <button type="button" class="btn btn-primary btn-sm">Escaneá y descubrí</button>
@@ -188,8 +186,6 @@ const renderPersonajes = (personajes) => {
     cardsContainer.innerHTML += personajes.map(createCardTemplate).join("");
 };
 
-
-
 function init() {
     renderPersonajes(personajes);
 
@@ -198,13 +194,14 @@ function init() {
     card.addEventListener('click', () => {
         card.classList.toggle('.flipped');
     });
-
+    
+    //INICIAR CAROUSEL
     const myCarouselElement = document.querySelector('#myCarousel')
     const carousel = new bootstrap.Carousel(myCarouselElement, {
         interval: 2000,
-        touch: false
-    })
-});
+        touch: false})
+    });
+
 }   
 init();
 
