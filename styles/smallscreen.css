@@ -1,5 +1,4 @@
-/* menos ancho que 600
-por ende, usas maxwidth para achicar las cosas en celu  */
+/* menos ancho que 600 */
 @media only screen and (max-width: 600px){
     * {
         box-sizing: border-box;
@@ -25,11 +24,6 @@ por ende, usas maxwidth para achicar las cosas en celu  */
     #navbar__logo-cultura, #navbar__logo-instituto{
         height: 50px;
         width: auto;
-    }
-
-    /* SLIDER */
-    .slider__container img{
-        object-fit: cover;
     }
 
     /* ARTICULOS */

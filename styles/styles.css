@@ -45,7 +45,7 @@ article hr{
     /* margin: 40px;
     padding: 5px 50px; */
     height: auto;
-    width: 1000px;
+    width: 100%;
     text-align: justify;
 }
 
@@ -73,18 +73,20 @@ article hr{
     font-size: 3em;
 }
 
-.tarjeta{
+.card-front,
+.card-back{
     display: flex;
     flex-direction: row;
-}
+    position: absolute;
+    gap: 15px;
+    padding: 5px 10px;
+    backface-visibility: hidden; /* Oculta el reverso cuando no se ve*/
+} 
 
-.tarjeta-cuerpo{
-    display:flex;
-    flex-direction:column;
-    justify-content:between;
-}
-
-.tarjetaPersonaje{
+.card-back{
+    transform: rotateY(180deg); /* La cara posterior se rota inicialmente */
+    display: flex;
+    flex-direction: column;
     transform-style: preserve-3d;
     transition: transform 0.4s ease;
     -webkit-transition: transform 0.4s ease;
@@ -93,23 +95,14 @@ article hr{
     -o-transition: transform 0.4s ease;
 }
 
+.card img{
+    height: 480px;
+    width: auto;
+}
 
-.card-front,
-.card-back{
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-
-    gap: 15px;
-    padding: 5px 10px;
-
-    backface-visibility: hidden; /* Oculta el reverso cuando no se ve*/
-} 
-
-.card-back{
-    transform: rotateY(180deg); /* La cara posterior se rota inicialmente */
-    display: flex;
-    flex-direction: column;
+#card-qr{
+    height: 480px;
+    width: auto;
 }
 
 .card-front__info{
@@ -123,16 +116,13 @@ article hr{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     gap: 10px;
 }
 
 .card-front-info__text{
     display: flex;
     flex-direction: column;
-
     gap: 20px;
-
     text-align: left;
 }
 
@@ -145,16 +135,6 @@ article hr{
     font-size: 1em;
     font-weight: 500;
 }
-
-.card img{
-    height: 480px;
-    width: auto;
-}
-
-#card-qr{
-    height: 480px;
-    width: auto;
-} */
 
 .flipped{
     transform: rotateY(180deg); /* Gira la tarjeta para mostrar el reverso */
@@ -173,7 +153,6 @@ article hr{
     height: 100%;
 }
 
-
 .artistas__hero{
     display: flex;
     flex-direction: row;
@@ -184,6 +163,8 @@ article hr{
     width: 160px;
 }
 
+
+/* FOOTER */
 footer{
     background: linear-gradient(90deg, rgba(50,187,255,1) 0%, rgba(252,70,165,1) 100%);
     display: flex;

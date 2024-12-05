@@ -148,9 +148,8 @@ const createCardTemplate = (personaje) => {
             <a class="btn btn-primary btn-sm" href="#" role="button">Escaneá</a>
         </div>
     </div>
-`   
-    }else {
-    return `
+    `   
+    } else { return `
     <div class="card bg-light border-secondary w-50 mb-3" style="height: 500px" id="${personaje.shortcut}">
 
         <div class="card-front">
@@ -179,7 +178,7 @@ const createCardTemplate = (personaje) => {
             <a class="btn btn-primary btn-sm" href="#" role="button">Escaneá</a>
         </div>
     </div>
-`   
+    `
 }}
 
 const renderPersonajes = (personajes) => {
@@ -187,9 +186,10 @@ const renderPersonajes = (personajes) => {
 };
 
 function init() {
+    //RENDERIZAR CARDS
     renderPersonajes(personajes);
 
-    //EFECTO DE FLIPEAR CARD
+    //EFECTO DE FLIPEAR CARD (fixear)
     cards.forEach((card) => {
     card.addEventListener('click', () => {
         card.classList.toggle('.flipped');
@@ -204,6 +204,3 @@ function init() {
 
 }   
 init();
-
-//FIXEAR EFECTO DE FLIP
-
