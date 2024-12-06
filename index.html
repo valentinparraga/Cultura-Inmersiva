@@ -1,186 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cultura Inmersiva</title>
 
     <!-- ESTILOS BASE -->
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/mediumscreen.css">
-    <link rel="stylesheet" href="styles/smallscreen.css">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/mediumscreen.css" />
+    <link rel="stylesheet" href="styles/smallscreen.css" />
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <!-- LOGO BROWSER -->
-    <link rel="shortcut icon" href="/assets/C-I-LOGO.png">
+    <link rel="shortcut icon" href="/assets/C-I-LOGO.png" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- Logos -->
-    <div class="container-fluid d-flex justify-content-between p-3 bg-light nav-logo-container">
-            <img src="/assets/CULTURA INMERSIVA.png" alt ="Cultura Inmersiva" id = "navbar__logo-cultura" class="img-fluid float-start">
-            <img src="/assets/Logo ICPBA.png" alt = "Instituto Cultural" id = "navbar__logo-instituto" class="img-fluid float-end">
+    <div
+      class="container-fluid d-flex justify-content-between p-3 bg-light nav-logo-container"
+    >
+      <img
+        src="/assets/CULTURA INMERSIVA.png"
+        alt="Cultura Inmersiva"
+        id="navbar__logo-cultura"
+        class="img-fluid float-start"
+      />
+      <img
+        src="/assets/Logo ICPBA.png"
+        alt="Instituto Cultural"
+        id="navbar__logo-instituto"
+        class="img-fluid float-end"
+      />
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active text-light fw-medium fs-4" aria-current="page" href="index.html">Inicio</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-light fw-medium fs-4"
+                aria-current="page"
+                href="index.html"
+                >Inicio</a
+              >
+            </li>
+            <!-- DESPLEGABLE -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light fw-medium fs-4"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Personajes</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#pizarnik"
+                    >Alejandra Pizarnik</a
+                  >
                 </li>
-                <!-- DESPLEGABLE -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-light fw-medium fs-4" href="#" role="button" data-bs-toggle="dropdown">Personajes</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#pizarnik">Alejandra Pizarnik</a></li>
-                    <li><a class="dropdown-item" href="#piazzolla">Astor Piazzolla</a></li>
-                    <li><a class="dropdown-item" href="#yupanqui">Atahualpa Yupanqui</a></li>
-                    <li><a class="dropdown-item" href="#maradona">Diego Maradona</a></li>
-                    <li><a class="dropdown-item" href="#petorutti">Emilio Pettoruti</a></li>
-                    <li><a class="dropdown-item" href="#hudson">Enrique Hudson</a></li>
-                    <li><a class="dropdown-item" href="#eva">Eva Perón</a></li>
-                    <li><a class="dropdown-item" href="#hebe">Hebe de Bonafini</a></li>
-                    <li><a class="dropdown-item" href="#pallamay">Isabel Pallamay</a></li>
-                    <li><a class="dropdown-item" href="#peron">Juan Domingo Perón</a></li>
-                    <li><a class="dropdown-item" href="#walsh">María Elena Walsh</a></li>
-                    <li><a class="dropdown-item" href="#muñoz">Mariela Muñoz</a></li>
-                  </ul>
+                <li>
+                  <a class="dropdown-item" href="#piazzolla">Astor Piazzolla</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light fw-medium fs-4" href="#articulo">¿Qué es la RA?</a>
+                <li>
+                  <a class="dropdown-item" href="#yupanqui"
+                    >Atahualpa Yupanqui</a
+                  >
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light fw-medium fs-4" href="#artistas">Artistas</a>
+                <li>
+                  <a class="dropdown-item" href="#maradona">Diego Maradona</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#petorutti"
+                    >Emilio Pettoruti</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#hudson">Enrique Hudson</a>
+                </li>
+                <li><a class="dropdown-item" href="#eva">Eva Perón</a></li>
+                <li>
+                  <a class="dropdown-item" href="#hebe">Hebe de Bonafini</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#pallamay">Isabel Pallamay</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#peron">Juan Domingo Perón</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#walsh">María Elena Walsh</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#muñoz">Mariela Muñoz</a>
                 </li>
               </ul>
-            </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fw-medium fs-4" href="#articulo"
+                >¿Qué es la RA?</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fw-medium fs-4" href="#artistas"
+                >Artistas</a
+              >
+            </li>
+          </ul>
         </div>
-    </nav>        
+      </div>
+    </nav>
 
     <!-- Main con carousel (ajustar imágenes) -->
     <main>
-        <div class="main-carrusel">
+      <div class="main-carrusel">
         <!-- CARROUSEL -->
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-            </div>
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
 
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/menu-slider/img1.png" class="h-75 d-inline-block img-fluid" style="width:100%">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/menu-slider/img2.JPG" class="h-75 d-inline-block img-fluid" style="width:100%">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/menu-slider/img3.jpeg" class="h-75 d-inline-block img-fluid" style="width:100%">
-              </div>
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="assets/menu-slider/img1.png"
+                class="h-75 d-inline-block img-fluid"
+                style="width: 100%"
+              />
             </div>
+            <div class="carousel-item">
+              <img
+                src="assets/menu-slider/img2.JPG"
+                class="h-75 d-inline-block img-fluid"
+                style="width: 100%"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/menu-slider/img3.jpeg"
+                class="h-75 d-inline-block img-fluid"
+                style="width: 100%"
+              />
+            </div>
+          </div>
 
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>    
+          <!-- Left and right controls/icons -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
-
-    </div>
+      </div>
     </main>
 
     <!-- Artículo informativo sobre el proyecto (ajustar en pantallas anchas) -->
     <article class="bg-light p-4">
-    <div class="article__container bg-light m-4 p-2" id="articulo">
-       <h2 class="article__title user-select-none">Una obra magnífica</h2>
-       <p class="article__text lh-base text-break text-dark user-select-none">Las obras presentadas exploran las complejidades de la identidad bonaerense, indagando en cómo la tecnología y la realidad aumentada redefinen nuestra percepción de lo que significa ser de la provincia de Buenos Aires.
-        En un contexto donde el arte y la tecnología convergen, esta muestra posibilita crear experiencias inmersivas que mezclan el entorno físico con capas digitales, revelando nuevas dimensiones de la identidad y la historia de nuestro territorio.
-        Esta exposición nos permite identificar cómo la tecnología no solo cambia la forma en que interactuamos con nuestro entorno, sino también cómo nos vemos a nosotros mismos y a nuestra cultura.
-        Dicha muestra reflexiona sobre la configuración y transformación del ser bonaerense en la era de la inteligencia artificial y la realidad aumentada.</p>     
-    </div>
-    <hr class="bg-secondary">
-    <div class="article__container bg-light m-4 p-2">
-        <h2 class="article__title user-select-none">¿Qué es la realidad aumentada?</h2>
-        <p class="article__text lh-base text-break text-dark user-select-none">La realidad aumentada (RA) es un tipo de tecnología que combina elementos virtuales con elementos físicos. Tiene algunos aspectos en común con la Realidad Virtual (VR), ya que ambas nos permiten ver e interactuar con imágenes, objetos y otros elementos construidos digitalmente.
-             Sin embargo, también existen diferencias importantes: la VR requiere de dispositivos especiales, como cascos, y al utilizarlos dejamos de ver el mundo físico, viendo únicamente el entorno digital. En cambio, la RA permite combinar elementos virtuales con el entorno físico que nos rodea, creando una experiencia mixta. Además, estas experiencias suelen ser accesibles desde dispositivos comunes como teléfonos móviles o tablets.
-             Para superponer imágenes digitales con el mundo real, la RA utiliza tecnologías como la cámara, GPS, sensores de movimiento, entre otros, para reconocer y hacer seguimiento de objetos o lugares físicos.</p>
-    </div>
+      <div class="article__container bg-light m-4 p-2" id="articulo">
+        <h2 class="article__title">Una obra magnífica</h2>
+        <p class="article__text lh-base text-break text-dark">
+          Las obras presentadas exploran las complejidades de la identidad
+          bonaerense, indagando en cómo la tecnología y la realidad aumentada
+          redefinen nuestra percepción de lo que significa ser de la provincia
+          de Buenos Aires. En un contexto donde el arte y la tecnología
+          convergen, esta muestra posibilita crear experiencias inmersivas que
+          mezclan el entorno físico con capas digitales, revelando nuevas
+          dimensiones de la identidad y la historia de nuestro territorio. Esta
+          exposición nos permite identificar cómo la tecnología no solo cambia
+          la forma en que interactuamos con nuestro entorno, sino también cómo
+          nos vemos a nosotros mismos y a nuestra cultura. Dicha muestra
+          reflexiona sobre la configuración y transformación del ser bonaerense
+          en la era de la inteligencia artificial y la realidad aumentada.
+        </p>
+      </div>
+      <hr class="bg-secondary" />
+      <div class="article__container bg-light m-4 p-2">
+        <h2 class="article__title">
+          ¿Qué es la realidad aumentada?
+        </h2>
+        <p class="article__text lh-base text-break text-dark">
+          La realidad aumentada (RA) es un tipo de tecnología que combina
+          elementos virtuales con elementos físicos. Tiene algunos aspectos en
+          común con la Realidad Virtual (VR), ya que ambas nos permiten ver e
+          interactuar con imágenes, objetos y otros elementos construidos
+          digitalmente. Sin embargo, también existen diferencias importantes: la
+          VR requiere de dispositivos especiales, como cascos, y al utilizarlos
+          dejamos de ver el mundo físico, viendo únicamente el entorno digital.
+          En cambio, la RA permite combinar elementos virtuales con el entorno
+          físico que nos rodea, creando una experiencia mixta. Además, estas
+          experiencias suelen ser accesibles desde dispositivos comunes como
+          teléfonos móviles o tablets. Para superponer imágenes digitales con el
+          mundo real, la RA utiliza tecnologías como la cámara, GPS, sensores de
+          movimiento, entre otros, para reconocer y hacer seguimiento de objetos
+          o lugares físicos.
+        </p>
+      </div>
     </article>
 
-     <!-- Sección de cards interactivas  -->
-    <section class="cards__container d-flex flex-column justify-content-center align-items-center w-100 p-4" id="cards">
-      
-      <h2 class="h2 text-light text-center mb-4" style="font-weight: 800;"> Personajes </h2>
-
+    <!-- Sección de cards interactivas  -->
+    <section
+      class="cards__container d-flex flex-column justify-content-center align-items-center w-100 p-4"
+      id="cards"
+    >
+      <h2 class="h2 text-light text-center mb-4" style="font-weight: 800">
+        Personajes
+      </h2>
     </section>
-   
+
     <!-- Artistas -->
     <section id="artistas" class="container-fluid d-flex flex-column w-100 p-5">
-        <h2 class="h2 text-dark text-center mb-4" style="font-weight: 800;">Artistas</h2>
-        <div class="artistas__hero justify-content-around">
-            <span class="artistas__hero-info d-flex flex-column justify-content-around">
-                <article class="articulo__artistas d-flex flex-column">
-                    <h3 class="artistas__hero-title h3">Federico Torroba</h3>
-                    <p class="artistas__hero-text lh-base text-break text-dark text-start">Artista 3D y desarrollador nacido en La Plata. Formado como diseñador en Comunicación Visual, 
-                        se especializó en nuevos medios y tecnologías. 
-                        Su producción artística explora la realidad aumentada y las tecnologías inmersivas. 
-                        Trabaja como freelance en diversos proyectos, encargos y con marcas.</p>
-                </article>
-                <button id="portfolio_btn" type="button" class="btn btn-primary portfolio-btn"><a href="https://federicotorroba.com/" target="_blank" class="text-decoration-none text-light">Portfolio</a></button>
-            </span>
-            <img src="/assets/federico_torroba.jpg" id="fedetorroba-avatar"alt="Federico Torroba" class="img-thumbnail rounded">
-        </div>
+      <h2 class="h2 text-dark text-center mb-4" style="font-weight: 800">
+        Artistas
+      </h2>
+      <div class="artistas__hero justify-content-around">
+        <span
+          class="artistas__hero-info d-flex flex-column justify-content-around"
+        >
+          <article class="articulo__artistas d-flex flex-column">
+            <h3 class="artistas__hero-title h3">Federico Torroba</h3>
+            <p
+              class="artistas__hero-text lh-base text-break text-dark text-start"
+            >
+              Artista 3D y desarrollador nacido en La Plata. Formado como
+              diseñador en Comunicación Visual, se especializó en nuevos medios
+              y tecnologías. Su producción artística explora la realidad
+              aumentada y las tecnologías inmersivas. Trabaja como freelance en
+              diversos proyectos, encargos y con marcas.
+            </p>
+          </article>
+          <button
+            id="portfolio_btn"
+            type="button"
+            class="btn btn-primary portfolio-btn"
+          >
+            <a
+              href="https://federicotorroba.com/"
+              target="_blank"
+              class="text-decoration-none text-light"
+              >Portfolio</a
+            >
+          </button>
+        </span>
+        <img
+          src="/assets/federico_torroba.jpg"
+          id="fedetorroba-avatar"
+          alt="Federico Torroba"
+          class="img-thumbnail rounded"
+        />
+      </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="container-fluid m-0 p-4">
-    <div class="footer__socials-container">
-         <span class="footer__main-logo">
-             <img src="/assets/icons-footers/ICBA-vertical.png" id="icba-logo-vertical">
-         </span>
-         <span class="footer__socials">
+      <div class="footer__socials-container">
+        <span class="footer__main-logo">
+          <img
+            src="/assets/icons-footers/ICBA-vertical.png"
+            id="icba-logo-vertical"
+          />
+        </span>
+        <span class="footer__socials">
           <span class="footer__socials-text">
             <h4 class="text-light h6">Para más información</h4>
             <h3 class="text-light h5">Redes sociales oficiales</h3>
           </span>
           <span class="socials__btns">
-              <a href="https://www.instagram.com/buenosairescultura/"> <img src="/assets/icons-footers/ig-icon 1.png" alt=""></a>
-              <a href="https://www.youtube.com/@institutoculturaldelaprovincia"> <img src="/assets/icons-footers/yt-icon 1.png" alt=""></a>
-              <a href="#"> <img src="/assets/icons-footers/x-icon 1.png" alt=""></a>
-              <a href="#"> <img src="/assets/icons-footers/fb-icon 1.png" alt=""></a>
+            <a href="https://www.instagram.com/buenosairescultura/">
+              <img src="/assets/icons-footers/ig-icon 1.png" alt=""
+            /></a>
+            <a href="https://www.youtube.com/@institutoculturaldelaprovincia">
+              <img src="/assets/icons-footers/yt-icon 1.png" alt=""
+            /></a>
+            <a href="#">
+              <img src="/assets/icons-footers/x-icon 1.png" alt=""
+            /></a>
+            <a href="#">
+              <img src="/assets/icons-footers/fb-icon 1.png" alt=""
+            /></a>
           </span>
-         </span>
-    </div>
-    <div class="footer__extra">
-         <span>
-             <img src="/assets/icons-footers/fondo-footer.png" id="dibujo-fondo-footer">
-         </span>
-         <div class="footer__extra-logo">
-             <img src="/assets/icons-footers/finde-logo.png" alt="">
-             <img src="/assets/icons-footers/codigo-logo.png" alt="">
-             <img src="/assets/icons-footers/bafilma-logo.png" alt="">
-             <img src="/assets/icons-footers/CET.webp" alt="">    
-         </div>
-    </div>
+        </span>
+      </div>
+      <div class="footer__extra">
+        <span>
+          <img
+            src="/assets/icons-footers/fondo-footer.png"
+            id="dibujo-fondo-footer"
+          />
+        </span>
+        <div class="footer__extra-logo">
+          <img src="/assets/icons-footers/finde-logo.png" alt="" />
+          <img src="/assets/icons-footers/codigo-logo.png" alt="" />
+          <img src="/assets/icons-footers/bafilma-logo.png" alt="" />
+          <img src="/assets/icons-footers/CET.webp" alt="" />
+        </div>
+      </div>
     </footer>
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+  </body>
 </html>
 
 <!-- -usar bootstrap, adaptabilidad pantallas
@@ -192,8 +354,7 @@
 
 -color header
 
--fixear cards a partir de 992, modo vertical  
-
+-fixear cards a partir de 992, modo vertical
 
 /* DUDAS: */
 /* -Queda un gap blaco en iphone a la derecha, se corta de repente. 
