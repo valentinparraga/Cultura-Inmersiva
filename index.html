@@ -7,8 +7,8 @@
 
     <!-- ESTILOS BASE -->
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/mediumscreen.css" />
-    <link rel="stylesheet" href="styles/smallscreen.css" />
+    <link rel="stylesheet" href="styles/large-screens.css" />
+    <link rel="stylesheet" href="styles/small-screens.css" />
     <!-- BOOTSTRAP -->
     <link
       rel="stylesheet"
@@ -170,7 +170,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="assets/menu-slider/img3.jpeg"
+                src="assets/menu-slider/img3.JPG"
                 class="h-75 d-inline-block img-fluid"
                 style="width: 100%"
               />
@@ -198,10 +198,10 @@
       </div>
     </main>
 
-    <!-- Artículo informativo sobre el proyecto (ajustar en pantallas anchas) -->
+    <!-- Artículo informativo sobre el proyecto -->
     <article class="bg-light p-4">
       <div class="article__container bg-light m-4 p-2" id="articulo">
-        <h2 class="article__title">Una obra magnífica</h2>
+        <h2 class="article__title h2 text-start fs-1 fw-bold mb-4">Una obra magnífica</h2>
         <p class="article__text lh-base text-break text-dark">
           Las obras presentadas exploran las complejidades de la identidad
           bonaerense, indagando en cómo la tecnología y la realidad aumentada
@@ -219,7 +219,7 @@
       </div>
       <hr class="bg-secondary" />
       <div class="article__container bg-light m-4 p-2">
-        <h2 class="article__title">
+        <h2 class="article__title h2 text-start fs-1 fw-bold mb-4">
           ¿Qué es la realidad aumentada?
         </h2>
         <p class="article__text lh-base text-break text-dark">
@@ -242,13 +242,14 @@
     </article>
 
     <!-- Sección de cards interactivas  -->
-    <section
-      class="cards__container d-flex flex-column justify-content-center align-items-center w-100 p-4"
-      id="cards"
-    >
-      <h2 class="h2 text-light text-center mb-4" style="font-weight: 800">
+    <section class="cards-container container-fluid d-flex flex-column align-items-center p-4">
+      <h2 class="h2 text-light text-center m-4" style="font-weight: 800">
         Personajes
       </h2>
+
+      <div class="row row-cols-1 row-cols-md-1 g-4 d-flex flex-column align-items-center contenedor-tarjetas">
+
+      </div>
     </section>
 
     <!-- Artistas -->
@@ -345,24 +346,10 @@
   </body>
 </html>
 
-<!-- -usar bootstrap, adaptabilidad pantallas
-
--boton para acceder desde card a escanear qr
+<!---
+Para instalar npm:
+  npm create vite
+  npm run dev
+    boton para acceder desde card a escanear qr
     (https://www.w3schools.com/bootstrap5/bootstrap_modal.php)
-
--efectos a los botones
-
--color header
-
--fixear cards a partir de 992, modo vertical
-
-/* DUDAS: */
-/* -Queda un gap blaco en iphone a la derecha, se corta de repente. 
-    Puede ser por liveserver? *SOLUCIONADO (propiedades aplicadas a elemento html y body en styles.css)*
-
-   -Por qué se corta el texto del articulo? Y por qué queda gap en la esquina superior izq. SOLUCIONADO
-
-   -Como implementar el flip de la card en mobile? Mostrar qr en grande?
-    Generar otra card con nombre y descripción + qr en grande.  
-   */
 -->

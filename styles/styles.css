@@ -55,7 +55,7 @@ article hr {
   text-align: justify;
 }
 
-.article__title,
+/* .article__title,
 .artistas__hero-title {
   font-size: 40px;
   font-weight: 700;
@@ -66,10 +66,10 @@ article hr {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.4em;
-}
+} */
 
 /* Estilos cards */
-.cards__container {
+.cards-container {
   background: rgb(239, 0, 255);
   background: linear-gradient(
     0deg,
@@ -78,11 +78,39 @@ article hr {
   );
   gap: 20px;
 }
-
-.cards__container h2 {
+.cards-container h2 {
   font-size: 3em;
 }
+.card{
+  display: flex;
+  flex-direction: row;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+
+/* .card img,
+#card-qr {
+  height: 480px;
+  width: auto;
+} */
+.card-title {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.flipped {
+  transform: rotateY(180deg); /* Gira la tarjeta para mostrar el reverso */
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/*
 .card-front,
 .card-back {
   display: flex;
@@ -90,11 +118,10 @@ article hr {
   position: absolute;
   gap: 15px;
   padding: 5px 10px;
-  backface-visibility: hidden; /* Oculta el reverso cuando no se ve*/
+  backface-visibility: hidden; /* Oculta el reverso cuando no se ve
 }
-
 .card-back {
-  transform: rotateY(180deg); /* La cara posterior se rota inicialmente */
+  transform: rotateY(180deg); /* La cara posterior se rota inicialmente
   display: flex;
   flex-direction: column;
   transform-style: preserve-3d;
@@ -105,22 +132,7 @@ article hr {
   -o-transition: transform 0.4s ease;
 }
 
-.card img {
-  height: 480px;
-  width: auto;
-}
 
-#card-qr {
-  height: 480px;
-  width: auto;
-}
-
-.card-front__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
-}
 
 .card-back__info {
   display: flex;
@@ -135,24 +147,7 @@ article hr {
   gap: 20px;
   text-align: left;
 }
-
-.card-title {
-  font-size: 2em;
-  font-weight: 800;
-}
-
-.card-text {
-  font-size: 1em;
-  font-weight: 500;
-}
-
-.flipped {
-  transform: rotateY(180deg); /* Gira la tarjeta para mostrar el reverso */
-}
-
-.reverse {
-  flex-direction: row-reverse;
-}
+*/
 
 /* ARTISTAS */
 /* #artistas{
