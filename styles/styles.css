@@ -91,12 +91,6 @@ article hr {
   justify-content: space-between;
 }
 
-
-/* .card img,
-#card-qr {
-  height: 480px;
-  width: auto;
-} */
 .card-title {
   font-size: 2em;
   font-weight: 800;
@@ -110,49 +104,7 @@ article hr {
   flex-direction: row-reverse;
 }
 
-/*
-.card-front,
-.card-back {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  gap: 15px;
-  padding: 5px 10px;
-  backface-visibility: hidden; /* Oculta el reverso cuando no se ve
-}
-.card-back {
-  transform: rotateY(180deg); /* La cara posterior se rota inicialmente
-  display: flex;
-  flex-direction: column;
-  transform-style: preserve-3d;
-  transition: transform 0.4s ease;
-  -webkit-transition: transform 0.4s ease;
-  -moz-transition: transform 0.4s ease;
-  -ms-transition: transform 0.4s ease;
-  -o-transition: transform 0.4s ease;
-}
-
-
-
-.card-back__info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.card-front-info__text {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: left;
-}
-*/
-
 /* ARTISTAS */
-/* #artistas{
-    outline: 1px solid red;
-} */
 #fedetorroba-avatar {
   width: 400px;
   height: 100%;

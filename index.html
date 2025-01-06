@@ -16,27 +16,22 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- ANIMATE.CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- LOGO BROWSER -->
     <link rel="shortcut icon" href="/assets/C-I-LOGO.png" />
   </head>
 
   <body>
     <!-- Logos -->
-    <div
-      class="container-fluid d-flex justify-content-between p-3 bg-light nav-logo-container"
-    >
-      <img
-        src="/assets/CULTURA INMERSIVA.png"
-        alt="Cultura Inmersiva"
-        id="navbar__logo-cultura"
-        class="img-fluid float-start"
-      />
-      <img
-        src="/assets/Logo ICPBA.png"
-        alt="Instituto Cultural"
-        id="navbar__logo-instituto"
-        class="img-fluid float-end"
-      />
+    <div class="container-fluid d-flex justify-content-between p-3 bg-light nav-logo-container">
+      <a href="index.html" target="_blank">
+        <img src="/assets/CULTURA INMERSIVA.png" alt="Cultura Inmersiva" id="navbar__logo-cultura" class="img-fluid float-start"/></a>
+      <a href="https://institutocultural.gba.gob.ar/" target="_blank">
+        <img src="/assets/Logo ICPBA.png" alt="Instituto Cultural" id="navbar__logo-instituto" class="img-fluid float-end"/></a>
     </div>
 
     <!-- Navbar -->
@@ -129,7 +124,7 @@
 
     <!-- Main con carousel (ajustar imágenes) -->
     <main>
-      <div class="main-carrusel">
+      <div class="main-carrusel animate__animated animate__fadeInUp">
         <!-- CARROUSEL -->
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
           <!-- Indicators/dots -->
@@ -200,7 +195,7 @@
 
     <!-- Artículo informativo sobre el proyecto -->
     <article class="bg-light p-4">
-      <div class="article__container bg-light m-4 p-2" id="articulo">
+      <div class="article__container bg-light m-4 p-2 animate__animated animate__fadeInLeft" id="articulo">
         <h2 class="article__title h2 text-start fs-1 fw-bold mb-4">Una obra magnífica</h2>
         <p class="article__text lh-base text-break text-dark">
           Las obras presentadas exploran las complejidades de la identidad
@@ -218,7 +213,7 @@
         </p>
       </div>
       <hr class="bg-secondary" />
-      <div class="article__container bg-light m-4 p-2">
+      <div class="article__container bg-light m-4 p-2 animate__animated animate__fadeInRight">
         <h2 class="article__title h2 text-start fs-1 fw-bold mb-4">
           ¿Qué es la realidad aumentada?
         </h2>
@@ -247,13 +242,61 @@
         Personajes
       </h2>
 
-      <div class="row row-cols-1 row-cols-md-1 g-4 d-flex flex-column align-items-center contenedor-tarjetas">
+      <div class="row row-cols-1 row-cols-md-1 g-4 d-flex flex-column align-items-center contenedor-tarjetas animate__animated animate__fadeIn">
+
+         <!-- CARD DEFAULT  -->
+         <div class="col" style="max-width: 1300px;">
+          <div class="tarjeta">
+            <div class="front">
+              <div class="card bg-light border-secondary p-2 my-2" id=${shortcut}>
+                <div class="row g-0 reverse">
+                  <div class="col-lg-3">
+                    <img src="/assets/cards/diego_armando_maradona.jpg" class="card-img img-fluid mx-auto d-block" style="max-width: 400px;">
+                  </div>
+                  <div class="col-lg-9">
+                    <div class="card-body h-100">
+                      <div class="card-info mb-3">
+                        <h5 class="h5 card-title text-center fs-3 fw-bold d-xl-none d-sm-block mb-3">Diego Maradona</h5>
+                        <h5 class="card-title text-start fs-3 fw-bold d-none d-xl-block mb-3">Diego Maradona</h5>
+                        <p class="card-text lh-base text-break">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit placeat possimus atque sint quasi quibusdam, veritatis itaque sunt suscipit minus.</p> 
+                        <figcaption class="blockquote-footer"><cite>Ilsutrador: Valen Párraga</cite></figcaption>  
+                      </div>
+                      <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Escaneá y descubrí</button>
+                      <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Escaneá y descubrí</button>
+                    </div>
+                  </div>
+                </div>    
+            </div>
+          </div>
+        
+          <div class="back">
+            <div class="card bg-light border-secondary p-2 my-2" id=${shortcut}>
+              <div class="row g-0 reverse">
+                <h5 class="h5 card-title text-center fs-3 fw-bold d-xl-none d-sm-block mb-3">Diego Maradona</h5>
+                <h5 class="card-title text-center fs-3 fw-bold d-none d-xl-block mb-3">Diego Maradona</h5>
+                <div class="col-lg-6 mb-3">
+                  <img src="/assets/cards/diego_armando_maradona.jpg" class="card-img img-fluid mx-auto d-block" style="max-width: 350px;">
+                </div>
+                <div class="col-lg-6">
+                  <div class="card-body h-100 d-flex flex-row align-items-center justify-content-around">
+                    <img src="/assets/cards/QR/Diego Armando Maradona.svg" class="card-img img-fluid mx-auto d-block" style="max-width: 400px;">
+                  </div>
+                </div>
+                <p class="card-text lh-base text-break text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit placeat possimus atque sint quasi quibusdam, veritatis itaque sunt suscipit minus.</p> 
+                <figcaption class="blockquote-footer text-center"><cite>Ilustrador: Valen Párraga</cite></figcaption>  
+                <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Volver</button>
+                <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Volver</button>
+              </div>
+            </div>  
+          </div>
+        </div>
+        </div>
 
       </div>
     </section>
 
     <!-- Artistas -->
-    <section id="artistas" class="container-fluid d-flex flex-column w-100 p-5">
+    <section id="artistas" class="container-fluid d-flex flex-column w-100 p-5 animate__animated animate__fadeIn">
       <h2 class="h2 text-dark text-center mb-4" style="font-weight: 800">
         Artistas
       </h2>
@@ -296,7 +339,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="container-fluid m-0 p-4">
+    <footer class="container-fluid m-0 p-4 animate__animated animate__fadeIn">
       <div class="footer__socials-container">
         <span class="footer__main-logo">
           <img

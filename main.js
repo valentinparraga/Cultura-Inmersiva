@@ -147,8 +147,8 @@ const createCardTemplate = (personaje) => {
                     <p class="card-text lh-base text-break">${descripcion}</p>
                     <figcaption class="blockquote-footer"><cite>${ilustrador}</cite></figcaption> 
                   </div>
-                  <button class="btn btn-primary w-50 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Escaneá</button>
-                  <button class="btn btn-primary w-50 text-wrap d-none d-xl-block">Escaneá</button>
+                  <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Escaneá y descubrí</button>
+                  <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Escaneá y descubrí</button>
                 </div>
               </div>
             </div>
@@ -170,8 +170,8 @@ const createCardTemplate = (personaje) => {
                     <p class="card-text lh-base text-break">${descripcion}</p> 
                     <figcaption class="blockquote-footer"><cite>${ilustrador}</cite></figcaption>  
                   </div>
-                  <button class="btn btn-primary w-50 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Escaneá</button>
-                  <button class="btn btn-primary w-50 text-wrap d-none d-xl-block">Escaneá</button>
+                  <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Escaneá y descubrí</button>
+                  <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Escaneá y descubrí</button>
                 </div>
               </div>
             </div>
@@ -201,6 +201,5 @@ function init() {
         interval: 2000,
         touch: false})
     });
-
 }   
 init();
