@@ -195,7 +195,7 @@
 
     <!-- Artículo informativo sobre el proyecto -->
     <article class="bg-light p-4">
-      <div class="article__container bg-light m-4 p-2 animate__animated animate__fadeInLeft" id="articulo">
+      <div class="article__container bg-light m-4 p-2 animate__animated animate__fadeIn" id="articulo">
         <h2 class="article__title h2 text-start fs-1 fw-bold mb-4">Una obra magnífica</h2>
         <p class="article__text lh-base text-break text-dark">
           Las obras presentadas exploran las complejidades de la identidad
@@ -213,7 +213,7 @@
         </p>
       </div>
       <hr class="bg-secondary" />
-      <div class="article__container bg-light m-4 p-2 animate__animated animate__fadeInRight">
+      <div class="article__container bg-light m-4 p-2 animate__animated animate__fadeIn">
         <h2 class="article__title h2 text-start fs-1 fw-bold mb-4">
           ¿Qué es la realidad aumentada?
         </h2>
@@ -243,54 +243,6 @@
       </h2>
 
       <div class="row row-cols-1 row-cols-md-1 g-4 d-flex flex-column align-items-center contenedor-tarjetas animate__animated animate__fadeIn">
-
-         <!-- CARD DEFAULT  -->
-         <div class="col" style="max-width: 1300px;">
-          <div class="tarjeta">
-            <div class="front">
-              <div class="card bg-light border-secondary p-2 my-2" id=${shortcut}>
-                <div class="row g-0 reverse">
-                  <div class="col-lg-3">
-                    <img src="/assets/cards/diego_armando_maradona.jpg" class="card-img img-fluid mx-auto d-block" style="max-width: 400px;">
-                  </div>
-                  <div class="col-lg-9">
-                    <div class="card-body h-100">
-                      <div class="card-info mb-3">
-                        <h5 class="h5 card-title text-center fs-3 fw-bold d-xl-none d-sm-block mb-3">Diego Maradona</h5>
-                        <h5 class="card-title text-start fs-3 fw-bold d-none d-xl-block mb-3">Diego Maradona</h5>
-                        <p class="card-text lh-base text-break">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit placeat possimus atque sint quasi quibusdam, veritatis itaque sunt suscipit minus.</p> 
-                        <figcaption class="blockquote-footer"><cite>Ilsutrador: Valen Párraga</cite></figcaption>  
-                      </div>
-                      <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Escaneá y descubrí</button>
-                      <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Escaneá y descubrí</button>
-                    </div>
-                  </div>
-                </div>    
-            </div>
-          </div>
-        
-          <div class="back">
-            <div class="card bg-light border-secondary p-2 my-2" id=${shortcut}>
-              <div class="row g-0 reverse">
-                <h5 class="h5 card-title text-center fs-3 fw-bold d-xl-none d-sm-block mb-3">Diego Maradona</h5>
-                <h5 class="card-title text-center fs-3 fw-bold d-none d-xl-block mb-3">Diego Maradona</h5>
-                <div class="col-lg-6 mb-3">
-                  <img src="/assets/cards/diego_armando_maradona.jpg" class="card-img img-fluid mx-auto d-block" style="max-width: 350px;">
-                </div>
-                <div class="col-lg-6">
-                  <div class="card-body h-100 d-flex flex-row align-items-center justify-content-around">
-                    <img src="/assets/cards/QR/Diego Armando Maradona.svg" class="card-img img-fluid mx-auto d-block" style="max-width: 400px;">
-                  </div>
-                </div>
-                <p class="card-text lh-base text-break text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit placeat possimus atque sint quasi quibusdam, veritatis itaque sunt suscipit minus.</p> 
-                <figcaption class="blockquote-footer text-center"><cite>Ilustrador: Valen Párraga</cite></figcaption>  
-                <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Volver</button>
-                <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Volver</button>
-              </div>
-            </div>  
-          </div>
-        </div>
-        </div>
 
       </div>
     </section>
@@ -388,11 +340,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
-<!---
-Para instalar npm:
-  npm create vite
-  npm run dev
-    boton para acceder desde card a escanear qr
-    (https://www.w3schools.com/bootstrap5/bootstrap_modal.php)
--->

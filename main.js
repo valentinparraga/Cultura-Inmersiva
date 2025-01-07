@@ -131,54 +131,101 @@ const esPar = (numero) =>{
 const createCardTemplate = (personaje) => {
     const {id, nombre, descripcion, shortcut, ilustracion, ilustrador, qr} = personaje
     if(esPar(id)){     
-        return `        
-        <!-- CARD DEFAULT  -->
+        return `
         <div class="col" style="max-width: 1300px;">
-          <div class="card bg-light border-secondary p-2 my-2" id=${shortcut}>
-            <div class="row g-0">
-              <div class="col-xl-3">
-                <img src="${ilustracion}" class="card-img img-fluid mx-auto d-block" style="max-width: 400px;">
-              </div>
-              <div class="col-xl-9">
-                <div class="card-body h-100">
-                  <div class="card-info mb-3">
-                    <h5 class="h5 card-title text-center fs-3 fw-bold d-xl-none d-sm-block mb-3">${nombre}</h5>
-                    <h5 class="card-title text-start fs-3 fw-bold d-none d-xl-block mb-3">${nombre}</h5>
-                    <p class="card-text lh-base text-break">${descripcion}</p>
-                    <figcaption class="blockquote-footer"><cite>${ilustrador}</cite></figcaption> 
+          <div class="tarjeta">
+            <div class="front">
+              <div class="card bg-light border-secondary p-2 my-2" id=${shortcut}>
+                <div class="row g-0 reverse">
+                  <div class="col-lg-3">
+                    <img src="${ilustracion}" class="card-img img-fluid mx-auto d-block" style="max-width: 400px;">
                   </div>
-                  <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Escaneá y descubrí</button>
-                  <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Escaneá y descubrí</button>
-                </div>
-              </div>
+                  <div class="col-lg-9">
+                    <div class="card-body h-100">
+                      <div class="card-info mb-3">
+                        <h5 class="h5 card-title text-center fs-3 fw-bold d-xl-none d-sm-block mb-3">${nombre}</h5>
+                        <h5 class="card-title text-start fs-3 fw-bold d-none d-xl-block mb-3">${nombre}</h5>
+                        <p class="card-text lh-base text-break">${descripcion}</p> 
+                        <figcaption class="blockquote-footer"><cite>${ilustrador}</cite></figcaption>  
+                      </div>
+                      <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Escaneá y descubrí</button>
+                      <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Escaneá y descubrí</button>
+                    </div>
+                  </div>
+                </div>    
             </div>
           </div>
+        
+          <div class="back">
+            <div class="card bg-light border-secondary p-2 my-2" id=${shortcut}>
+              <div class="row g-0 reverse">
+                <h5 class="h5 card-title text-center fs-3 fw-bold d-xl-none d-sm-block mb-3">${nombre}</h5>
+                <h5 class="card-title text-center fs-3 fw-bold d-none d-xl-block mb-3">${nombre}</h5>
+                <div class="col-lg-6 mb-3">
+                  <img src="${ilustracion}" class="card-img img-fluid mx-auto d-block" style="max-width: 350px;">
+                </div>
+                <div class="col-lg-6">
+                  <div class="card-body h-100 d-flex flex-row align-items-center justify-content-around">
+                    <img src="${qr}" class="card-img img-fluid mx-auto d-block" style="max-width: 400px;">
+                  </div>
+                </div>
+                <p class="card-text lh-base text-break text-center">${descripcion}</p> 
+                <figcaption class="blockquote-footer text-center"><cite>${ilustrador}</cite></figcaption>  
+                <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Volver</button>
+                <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Volver</button>
+              </div>
+            </div>  
+          </div>
+        </div>
         </div>`
     }else{
-        return `<!-- CARD DEFAULT  -->
-        <div class="col" style="max-width: 1300px;">
+      return `<div class="col" style="max-width: 1300px;">
+        <div class="tarjeta">
+          <div class="front">
+            <div class="card bg-light border-secondary p-2 my-2 reverse" id=${shortcut}>
+              <div class="row g-0">
+                <div class="col-lg-3">
+                  <img src="${ilustracion}" class="card-img img-fluid mx-auto d-block" style="max-width: 400px;">
+                </div>
+                <div class="col-lg-9">
+                  <div class="card-body h-100">
+                    <div class="card-info mb-3">
+                      <h5 class="h5 card-title text-center fs-3 fw-bold d-xl-none d-sm-block mb-3">${nombre}</h5>
+                      <h5 class="card-title text-start fs-3 fw-bold d-none d-xl-block mb-3">${nombre}</h5>
+                      <p class="card-text lh-base text-break">${descripcion}</p> 
+                      <figcaption class="blockquote-footer"><cite>${ilustrador}</cite></figcaption>  
+                    </div>
+                    <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Escaneá y descubrí</button>
+                    <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Escaneá y descubrí</button>
+                  </div>
+                </div>
+              </div>    
+          </div>
+        </div>
+      
+        <div class="back">
           <div class="card bg-light border-secondary p-2 my-2" id=${shortcut}>
             <div class="row g-0 reverse">
-              <div class="col-xl-3">
-                <img src="${ilustracion}" class="card-img img-fluid mx-auto d-block" style="max-width: 400px;">
+              <h5 class="h5 card-title text-center fs-3 fw-bold d-xl-none d-sm-block mb-3">${nombre}</h5>
+              <h5 class="card-title text-center fs-3 fw-bold d-none d-xl-block mb-3">${nombre}</h5>
+              <div class="col-lg-6 mb-3">
+                <img src="${ilustracion}" class="card-img img-fluid mx-auto d-block" style="max-width: 350px;">
               </div>
-              <div class="col-xl-9">
-                <div class="card-body h-100">
-                  <div class="card-info mb-3">
-                    <h5 class="h5 card-title text-center fs-3 fw-bold d-xl-none d-sm-block mb-3">${nombre}</h5>
-                    <h5 class="card-title text-start fs-3 fw-bold d-none d-xl-block mb-3">${nombre}</h5>
-                    <p class="card-text lh-base text-break">${descripcion}</p> 
-                    <figcaption class="blockquote-footer"><cite>${ilustrador}</cite></figcaption>  
-                  </div>
-                  <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Escaneá y descubrí</button>
-                  <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Escaneá y descubrí</button>
+              <div class="col-lg-6">
+                <div class="card-body h-100 d-flex flex-row align-items-center justify-content-around">
+                  <img src="${qr}" class="card-img img-fluid mx-auto d-block" style="max-width: 400px;">
                 </div>
               </div>
+              <p class="card-text lh-base text-break text-center">${descripcion}</p> 
+              <figcaption class="blockquote-footer text-center"><cite>${ilustrador}</cite></figcaption>  
+              <button class="btn btn-primary w-100 text-wrap d-flex flex-column align-self-center align-items-center d-xl-none d-sm-block">Volver</button>
+              <button class="btn btn-primary w-100 text-wrap d-none d-xl-block">Volver</button>
             </div>
-          </div>
-        </div>`
+          </div>  
+        </div>
+      </div>
+      </div>`
     }
-
 }
 
 const renderPersonajes = (personajes) => {
@@ -188,18 +235,11 @@ const renderPersonajes = (personajes) => {
 function init() {
     //RENDERIZAR CARDS
     renderPersonajes(personajes);
-
-    //EFECTO DE FLIPEAR CARD (fixear)
-    cards.forEach((card) => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('.flipped');
-    });
     
     //INICIAR CAROUSEL
     const myCarouselElement = document.querySelector('#myCarousel')
     const carousel = new bootstrap.Carousel(myCarouselElement, {
         interval: 2000,
-        touch: false})
-    });
+        touch: false});
 }   
 init();
